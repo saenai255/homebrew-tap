@@ -17,9 +17,10 @@ cask "openbar" do
   app "OpenBar.app"
 
   # Not notarized by Apple; without this Gatekeeper refuses to open it.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/OpenBar.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/OpenBar.app"],
+        writable_paths: ["{{appdir}}/OpenBar.app"]
   end
 
   uninstall quit: "com.openbar.OpenBar"
