@@ -1,6 +1,6 @@
 cask "openbar" do
-  version "1.0.0"
-  sha256 "92b446b8296d4c8dd15659fd31c8121b16b8dac345260f28fd2c09b1b6007b4d"
+  version "1.0.1"
+  sha256 "501a9ba9222fcbb240d2bdc19d36501095713a8e12306f25772eff7fc1c85c7d"
 
   url "https://github.com/saenai255/openbar/releases/download/v#{version}/OpenBar-#{version}.dmg"
   name "OpenBar"
