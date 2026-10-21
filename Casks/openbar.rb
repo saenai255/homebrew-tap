@@ -12,7 +12,7 @@ cask "openbar" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   app "OpenBar.app"
 
@@ -25,7 +25,7 @@ cask "openbar" do
   uninstall quit: "com.openbar.OpenBar"
 
   zap trash: [
-    "~/Library/Preferences/com.openbar.OpenBar.plist",
     "~/Library/Caches/com.openbar.OpenBar",
+    "~/Library/Preferences/com.openbar.OpenBar.plist",
   ]
 end
